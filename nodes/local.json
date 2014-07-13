@@ -4,7 +4,8 @@
     "base_package",
     "dotfiles",
     "vim",
-    "mysql"
+    "mysql",
+    "plenv"
   ],
   "automatic": {
     "ipaddress": "local"
