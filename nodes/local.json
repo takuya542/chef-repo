@@ -3,7 +3,8 @@
     "yum",
     "base_package",
     "dotfiles",
-    "vim"
+    "vim",
+    "mysql"
   ],
   "automatic": {
     "ipaddress": "local"
