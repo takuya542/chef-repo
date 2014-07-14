@@ -52,6 +52,8 @@ bash "cpan-modules install" do
     environment "HOME" => '/home/vagrant'
     code <<-EOF
     source ~/.bash_profile
-    cpanm < ~/dotfiles/Installer/list_cpan.txt
+    cpanm App::Ack
+    cpanm Mojolicious
+    cpanm < ~/dotfiles/Installer/list_cpan
     EOF
 end
