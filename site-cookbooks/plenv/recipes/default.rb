@@ -43,17 +43,3 @@ bash "cpanm install" do
     plenv install-cpanm
     EOF
 end
-
-
-bash "cpan-modules install" do
-    user 'vagrant'
-    group 'vagrant'
-    cwd '/home/vagrant'
-    environment "HOME" => '/home/vagrant'
-    code <<-EOF
-    source ~/.bash_profile
-    cpanm App::Ack
-    cpanm Mojolicious
-    cpanm < ~/dotfiles/Installer/list_cpan
-    EOF
-end
