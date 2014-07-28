@@ -6,7 +6,8 @@
     "vim",
     "mysql",
     "plenv",
-    "cpanm-module"
+    "cpanm-module",
+    "crowler"
   ],
   "automatic": {
     "ipaddress": "local"
