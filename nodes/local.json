@@ -1,6 +1,5 @@
 {
   "run_list": [
-    "yum",
     "base_package",
     "dotfiles",
     "vim",
