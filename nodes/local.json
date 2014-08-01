@@ -1,5 +1,6 @@
 {
   "run_list": [
+    "adduser",
     "base_package",
     "dotfiles",
     "vim",
