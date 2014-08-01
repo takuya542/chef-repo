@@ -1,0 +1,8 @@
+{
+  "id": "vagrant",
+  "shell": "/bin/bash",
+  "username": "vagrant",
+  "group": "wheel",
+  "password": "$1$UzJAA4iX$inJZUybUi2o2vNf6AaEEH/",
+  "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZU3GRSdE0L70GT4We9HvWIUGCuMFDDLunrYkZ3fjLU5BQxa5b85qulFOb1acVG7ziW8ZnTz/mzlZO0vt7kFAyfglk3dhv3top0wMaKs+42/tINcyExIXnPjKRSwUAacyLQvpIX73rZUPSa5Fzg9Ug8TAUP7Wo6unoNv6hB47gX7Cbas/q/PH8K5hGtfw43xqODJCbtCEg0DXPPyI5IJtYkTCaW9BQPe0zLZHQkNXIfJUvtdL34xsOsHiOe/ir5F8HG3ifuAST55DUva0xifqS+IK4/7Idjx3k61SzKM+ICf7qqHlfoR7VU5Dc8bSpN3FlpjcSUTMzTgvtq3xAhcRD takuya.onda@O-03170-MAC.local"
+}
