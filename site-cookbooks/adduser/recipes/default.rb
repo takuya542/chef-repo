@@ -9,7 +9,6 @@
 # 参考：http://girigiribauer.com/archives/1066
 
 
-# wheelグループの作成 (visudoでwheelグループ許可しないとsudo許可されないので注意.別のcookbookでなんとかする)
 group "wheel" do
    gid 10
    action :create
@@ -20,8 +19,16 @@ data_ids = data_bag('users')
 
 data_ids.each do |id|
 
-    # ユーザー作成
     u = data_bag_item('users', id)
+
+    #group作成
+    group u['group'] do
+        group_name u['group']
+        gid u['gid']
+        action :create
+    end
+
+    # ユーザー作成
     user u['username'] do
         password u['password']
         supports :manage_home => true, :non_unique => false
@@ -37,12 +44,11 @@ data_ids.each do |id|
         action :create
     end
 
-    # ssh公開鍵の配置
     file "/home/#{id}/.ssh/authorized_keys" do
         owner u["id"]
+        group u["id"]
         mode 0600
-        content u["key"]
-        action :create_if_missing
+        content u["ssh_key"]
     end
 
 end

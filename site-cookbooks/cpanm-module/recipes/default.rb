@@ -8,10 +8,10 @@
 #
 #
 bash "cpan-modules install" do
-    user 'vagrant'
-    group 'vagrant'
-    cwd '/home/vagrant'
-    environment "HOME" => '/home/vagrant'
+    user 'onda'
+    group 'onda'
+    cwd '/home/onda'
+    environment "HOME" => '/home/onda'
     code <<-EOF
     source ~/.bash_profile
     cpanm App::Ack

@@ -7,35 +7,44 @@
 # All rights reserved - Do Not Redistribute
 #
 #
-git "/home/vagrant/dotfiles" do
-    repository "git://github.com/takuya542/dotfiles.git"
-    revision "master"
-    action :sync
-    user "vagrant"
-    group "vagrant"
-end
+#
+data_ids = data_bag('users')
+data_ids.each do |id|
 
-%w{.bash_alias .bashrc .jshintrc .perltidyrc .proverc .vimrc .vim .tmux .my.conf}.each do |file|
-    link "/home/vagrant/#{file}" do
-        to "/home/vagrant/dotfiles/#{file}"
+    u = data_bag_item('users', id)
+
+    git "/home/#{id}/dotfiles" do
+      repository "git://github.com/takuya542/dotfiles.git"
+      revision "master"
+      action :sync
+      user  u['id']
+      group u['id']
     end
-end
 
-bash "mkdir bundle" do
-    user 'vagrant'
-    group 'vagrant'
-    cwd '/home/vagrant'
-    environment "HOME" => '/home/vagrant'
-    code <<-EOF
-    mkdir /home/vagrant/.vim/bundle
-    EOF
-    creates "/home/vagrant/.vim/bundle"
-end
+    %w{.bash_alias .bashrc .jshintrc .perltidyrc .proverc .vimrc .vim .tmux .my.conf}.each do |file|
+      link "/home/#{id}/#{file}" do
+        to "/home/#{id}/dotfiles/#{file}"
+      end
+    end
 
-git "/home/vagrant/.vim/bundle/vundle" do
-    repository "git://github.com/gmarik/Vundle.vim.git"
-    revision "master"
-    action :sync
-    user "vagrant"
-    group "vagrant"
+    bash "mkdir bundle" do
+      user  u['id']
+      group u['id']
+      cwd "/home/#{id}"
+      environment "HOME" => "/home/#{id}"
+      code <<-EOF
+        mkdir /home/#{id}/.vim/bundle
+      EOF
+      creates "/home/#{id}/.vim/bundle"
+    end
+
+    git "/home/#{id}/.vim/bundle/vundle" do
+      repository "git://github.com/gmarik/Vundle.vim.git"
+      revision "master"
+      action :sync
+      user  u['id']
+      group u['id']
+    end
+
+
 end

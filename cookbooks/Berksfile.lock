@@ -1,0 +1,5 @@
+DEPENDENCIES
+  sudo
+
+GRAPH
+  sudo (2.6.0)

@@ -1,0 +1,9 @@
+{
+  "id": "onda",
+  "shell": "/bin/bash",
+  "username": "onda",
+  "group": "onda",
+  "gid": "403",
+  "password": "$1$UzJAA4iX$inJZUybUi2o2vNf6AaEEH/",
+  "ssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDwJsO92NjWXxYsm5M62LqqoKoD7GB307SyF0a994MKQULtRdB5dU/Fh/gUlXMzSnFVQOtwz5zl1K/RV2I8srNduLrBHueytS/97ZX6g2zVGR6nCK32BIGbkkpFEzaCH/CI1H0DgWMAB9wxpr7Sku+DZcIWomdzVIwRgXWipXVuk6HR69Nm7M37eghle0D9abwrGRxnuWJT1jhyjhUuUEgKl7ahSt48ge5zfUznZUlO3mE3gPKqv6uGoK/VFP88OAgspy5nbaZHN1wF2BxiM9YX10I8NuHqmJqkaFZ1iH+08JxgWjJkA+rzWOkxIm5XNPp3pwGf49NQ0Tge9E1j5u+R onda@takuyaonda-no-MacBook-Pro.local"
+}

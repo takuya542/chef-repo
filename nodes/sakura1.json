@@ -9,7 +9,7 @@
     "plenv"
   ],
   "automatic": {
-    "ipaddress": "local"
+    "ipaddress": "sakura1"
   },
   "authorization": {
     "sudo": {
