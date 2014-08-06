@@ -6,7 +6,8 @@
     "dotfiles",
     "vim",
     "mysql",
-    "plenv"
+    "plenv",
+    "cpanm-module"
   ],
   "automatic": {
     "ipaddress": "local"
