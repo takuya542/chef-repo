@@ -7,14 +7,21 @@
 # All rights reserved - Do Not Redistribute
 #
 #
-bash "cpan-modules install" do
-    user 'onda'
-    group 'onda'
-    cwd '/home/onda'
-    environment "HOME" => '/home/onda'
-    code <<-EOF
-    source ~/.bash_profile
-    cpanm App::Ack
-    cpanm Mojolicious
-    EOF
+data_ids = data_bag('users')
+data_ids.each do |id|
+
+    u = data_bag_item('users', id)
+
+    bash "cpan-modules install" do
+      user  u['id']
+      group u['id']
+      cwd "/home/#{id}"
+      environment "HOME" => "/home/#{id}"
+      code <<-EOF
+        source /home/#{id}/.bash_profile
+        cpanm App::Ack
+        cpanm Mojolicious
+      EOF
+    end
+
 end

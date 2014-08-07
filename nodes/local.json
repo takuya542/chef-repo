@@ -7,7 +7,8 @@
     "vim",
     "mysql",
     "plenv",
-    "cpanm-module"
+    "cpanm-module",
+    "recipe[nginx]"
   ],
   "automatic": {
     "ipaddress": "local"
@@ -23,5 +24,13 @@
         "secure_path=\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\""
       ]
     }
+  },
+  "nginx":{
+    "version": "1.4.1",
+    "install_method": "source",
+    "source": {
+      "version": "1.4.1"
+    },
+    "worker_processes": 2
   }
 }
