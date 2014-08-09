@@ -1,14 +1,6 @@
 {
   "run_list": [
-    "adduser",
-    "recipe[sudo]",
-    "base_package",
-    "dotfiles",
-    "vim",
-    "mysql",
-    "plenv",
-    "cpanm-module",
-    "recipe[nginx]"
+    "mysql"
   ],
   "automatic": {
     "ipaddress": "sakura1"

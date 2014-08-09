@@ -16,7 +16,6 @@ template "/etc/my.cnf" do
     owner "root"
     group "root"
     mode 644
-    notifies :relode, 'service[mysqld]'
 end
 
 service "mysqld" do
