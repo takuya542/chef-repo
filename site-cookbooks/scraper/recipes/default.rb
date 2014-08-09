@@ -1,11 +1,10 @@
 #
-# Cookbook Name:: cpanm-module
+# Cookbook Name:: scraper
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME
 #
 # All rights reserved - Do Not Redistribute
-#
 #
 data_ids = data_bag('users')
 data_ids.each do |id|
@@ -19,9 +18,7 @@ data_ids.each do |id|
       environment "HOME" => "/home/#{id}"
       code <<-EOF
         source /home/#{id}/.bash_profile
-        cpanm App::Ack
-        cpanm Mojolicious
-        cpanm -n < /home/#{id}/dotfiles/Installer/list_cpan.txt
+        cpanm Web::Scraper
       EOF
     end
 

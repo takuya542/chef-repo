@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: cpanm-module
+# Cookbook Name:: teng
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME
@@ -19,9 +19,8 @@ data_ids.each do |id|
       environment "HOME" => "/home/#{id}"
       code <<-EOF
         source /home/#{id}/.bash_profile
-        cpanm App::Ack
-        cpanm Mojolicious
-        cpanm -n < /home/#{id}/dotfiles/Installer/list_cpan.txt
+        sudo yum -y install mysql-devel
+        cpanm Teng DBD::mysql
       EOF
     end
 
