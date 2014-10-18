@@ -1,6 +1,14 @@
 {
   "run_list": [
-    "teng"
+
+"adduser",
+    "adduser",
+    "recipe[sudo]",
+    "base_package",
+    "dotfiles",
+    "vim",
+    "plenv",
+    "mysql"
   ],
   "automatic": {
     "ipaddress": "local"

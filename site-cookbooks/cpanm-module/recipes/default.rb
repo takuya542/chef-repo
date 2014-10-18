@@ -21,6 +21,7 @@ data_ids.each do |id|
         source /home/#{id}/.bash_profile
         cpanm App::Ack
         cpanm Mojolicious
+        cpanm Server::Starter Starman Net::Server::SS::PreFork
         cpanm -n < /home/#{id}/dotfiles/Installer/list_cpan.txt
       EOF
     end

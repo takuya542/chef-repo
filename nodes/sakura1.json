@@ -1,6 +1,8 @@
 {
   "run_list": [
-    "mysql"
+    "teng",
+    "scraper",
+    "web"
   ],
   "automatic": {
     "ipaddress": "sakura1"
