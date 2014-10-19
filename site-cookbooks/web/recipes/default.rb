@@ -23,7 +23,7 @@ data_ids.each do |id|
 
     # Web
     git "/home/#{id}/Web" do
-      repository "git://github.com/takuya542/web.git"
+      repository "git://github.com/takuya542/mojoliciout_template.git"
       revision "master"
       action :sync
       user  u['id']
