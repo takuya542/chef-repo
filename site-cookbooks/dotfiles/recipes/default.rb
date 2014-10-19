@@ -21,7 +21,7 @@ data_ids.each do |id|
       group u['id']
     end
 
-    %w{.bash_alias .bashrc .jshintrc .perltidyrc .proverc .vimrc .vim .tmux .my.conf}.each do |file|
+    %w{.bash_alias .bashrc .jshintrc .perltidyrc .proverc .vimrc .vim .tmux .my.conf .agignore}.each do |file|
       link "/home/#{id}/#{file}" do
         to "/home/#{id}/dotfiles/#{file}"
       end
